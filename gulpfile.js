@@ -60,13 +60,13 @@ gulp.task("scripts", function () {
 gulp.task("icons", function () {
 	return gulp
 		.src("src/icons/**/*")
-		.pipe(gulp.dest("dist/icons"))
+		.pipe(gulp.dest("dist/icons",{encoding: false }))
 		.pipe(browserSync.stream());
 });
 
 gulp.task("images", function () {
 	return gulp
-		.src("src/img/**/*")
+		.src("src/img/**/*",{encoding: false })
 		.pipe(gulp.dest("dist/img"))
 		.pipe(browserSync.stream());
 });
