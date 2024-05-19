@@ -12,3 +12,9 @@ closeElem.addEventListener('click', () => {
 
 });
 
+const percent = document.querySelectorAll('.skills__progress-percent'),
+	lines = document.querySelectorAll('.skills__progress-result')
+
+percent.forEach((item, i) =>{
+	lines[i].style.width = item.innerHTML;
+});
